@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+		<title>osm-tag-evolution</title>
+		<meta name='viewport' content='width=device-width, target-densitydpi=high-dpi, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1' /> <!-- iOS: Fill screen -->
+		<meta name='HandheldFriendly' content='true' />
+		<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css'>
+	</head>
+	<body>
+	<div id='form'>
+		<table>
+			<tr><td>startdate</td><td><input type='date' class='fill' id='startdate' value='2015-01-27T00:00:00.000Z'></input></td></tr>
+			<tr><td>tags</td><td><input type='text' class='fill' id='tags' value='node["amenity"="drinking_water"]'></input></td></tr>
+			<tr><td>area</td><td><input type='text' class='fill' id='area' value='3600349027'></input></td></tr>
+			<tr><td>timeout</td><td><input type='number' class='fill' id='timeout' value="25"></input></td></tr>
+		</table>
+		<button onclick="start()">Load</button>
+	</div>
+	<div id='results'></div>
+		<canvas id='myChart' width='400' height='400'></canvas>
+	</body>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+	<script src='lib/Chart.min.js' defer></script>
+	<script src='js/utilities.js' defer></script>
+</html>
