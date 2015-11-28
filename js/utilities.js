@@ -55,7 +55,7 @@ function start() {
 function load() {
 	queryOverpass(
 		{date:date.toISOString(),
-		query:'area('+area+')->.sA;'+tags+'(area.sA);out count;',
+		query:(area?'area('+area+')->.sA;':'')+tags+(area?'(area.sA);':';')+'out count;',
 		timeout:timeout},
 		add);
 }
